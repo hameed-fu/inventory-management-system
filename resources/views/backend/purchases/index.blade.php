@@ -22,7 +22,7 @@
             <button class="btn btn-primary mb-1">Add New</button>
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">All Items</h3>
+                    <h3 class="card-title">All Purchases</h3>
                 </div>
 
                 <div class="card-body">
