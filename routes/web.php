@@ -23,18 +23,12 @@ Route::get('categories', [App\Http\Controllers\CategoryController::class,'index'
 
 Route::get('items', [App\Http\Controllers\ItemController::class,'index'])->name('items');
 
+Route::get('users', [App\Http\Controllers\ItemController::class,'index'])->name('users');
+
+Route::get('Sales', [App\Http\Controllers\ItemController::class,'index'])->name('Sales');
+
+Route::get('purchases', [App\Http\Controllers\ItemController::class,'index'])->name('purchases');
+
  
-
-Route::get('/users', function () {
-    return view('backend.users.index');
-})->name('users');
-
-Route::get('/sales', function () {
-    return view('backend.sales.index');
-})->name('sales');
-
-Route::get('/purchases', function () {
-    return view('backend.purchases.index');
-})->name('purchases');
 
 
