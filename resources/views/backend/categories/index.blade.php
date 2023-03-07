@@ -19,7 +19,38 @@
         </div>
 
         <div class="container">
-            <button class="btn btn-primary mb-1">Add New</button>
+
+            <!-- Button trigger modal -->
+ 
+  
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add New Category</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="{{ route('categories.add') }}" method="post">
+                            @csrf
+                            <div class="form-group">
+                                <label for="">Name</label>
+                                <input type="text" class="form-control" name="name" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                        </form>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <button class="btn btn-primary mb-1" data-toggle="modal" data-target="#exampleModal">Add New</button>
             <div class="card">
                 <div class="card-header">
                     <h3 class="card-title">All Items</h3>
