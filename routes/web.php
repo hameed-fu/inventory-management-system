@@ -19,6 +19,10 @@ Route::get('/', function () {
 
 
 
+
+// 
+
+
 Route::get('categories', [App\Http\Controllers\CategoryController::class,'index'])->name('categories');
 
 Route::get('items', [App\Http\Controllers\ItemController::class,'index'])->name('items');
