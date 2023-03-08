@@ -8,7 +8,8 @@ use App\Models\categories;
 class CategoryController extends Controller
 {
     function index(){
-        return view('backend.categories.index');
+        $categories = categories::all();
+        return view('backend.categories.index', compact('categories')); //['categories' => $categories]
     }
 
     function create(){
@@ -23,10 +24,10 @@ class CategoryController extends Controller
         ]);
 
         if($status){
-            return  redirect()->back();
+            return redirect('categories')->with('success','Record added successfully');
         }
         else{
-            return "Something went wrong";
+            return  redirect()->back()->with('error','Something went wrong');
         }
 
 
