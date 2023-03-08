@@ -30,7 +30,7 @@ Route::get('items', [App\Http\Controllers\ItemController::class,'index'])->name(
 
 Route::get('users', [App\Http\Controllers\ItemController::class,'index'])->name('users');
 
-Route::get('Sales', [App\Http\Controllers\ItemController::class,'index'])->name('Sales');
+Route::get('sales', [App\Http\Controllers\ItemController::class,'index'])->name('Sales');
 
 Route::get('purchases', [App\Http\Controllers\ItemController::class,'index'])->name('purchases');
 
