@@ -186,11 +186,21 @@
             <a href="#" class="nav-link ">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Admin
+                Dahboard
 
               </p>
             </a>
             </li>
+
+            <li class="nav-item has-treeview ">
+              <a href="{{('users')}}" class="nav-link ">
+                <i class="nav-icon fas fa-users"></i>
+                <p>
+                 Users
+  
+                </p>
+              </a>
+              </li>
 
             <li class="nav-item has-treeview ">
             <a href="{{ route('categories') }}" class="nav-link">
@@ -201,6 +211,15 @@
               </p>
             </a>
             </li>
+            <li class="nav-item has-treeview ">
+              <a href="{{('items')}}" class="nav-link ">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  Items
+  
+                </p>
+              </a>
+              </li>
             <li class="nav-item has-treeview ">
             <a href="{{('sales')}}" class="nav-link ">
               <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -219,24 +238,8 @@
               </p>
             </a>
             </li>
-            <li class="nav-item has-treeview ">
-            <a href="{{('users')}}" class="nav-link ">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-               Users
-
-              </p>
-            </a>
-            </li>
-            <li class="nav-item has-treeview ">
-            <a href="{{('items')}}" class="nav-link ">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Items
-
-              </p>
-            </a>
-            </li>
+            
+            
 
 
 
