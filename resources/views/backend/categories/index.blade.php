@@ -92,7 +92,7 @@
                                             <td>{{ $category->name }}</td>
                                             <td>
                                                 <a class="btn btn-sm btn-warning" href="#">Edit</a>
-                                                <a class="btn btn-sm btn-danger" href="#">Delete</a>
+                                                <a onclick="return confirm('are you sure?')" class="btn btn-sm btn-danger" href="{{ route('categories.delete',$category->id) }}">Delete</a>
                                             </td>
                                         </tr>
                                     @endforeach
