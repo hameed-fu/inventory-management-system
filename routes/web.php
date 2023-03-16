@@ -25,6 +25,8 @@ Route::get('/', function () {
 
 Route::get('categories', [App\Http\Controllers\CategoryController::class,'index'])->name('categories');
 Route::post('categories/store', [App\Http\Controllers\CategoryController::class,'store'])->name('categories.add');
+Route::get('categories/edit/{id}', [App\Http\Controllers\CategoryController::class,'edit'])->name('categories.edit');
+Route::post('categories/update', [App\Http\Controllers\CategoryController::class,'update'])->name('categories.update');
 Route::get('categories/delete/{id}', [App\Http\Controllers\CategoryController::class,'delete'])->name('categories.delete');
 
 Route::get('items', [App\Http\Controllers\ItemController::class,'index'])->name('items');

@@ -91,7 +91,7 @@
                                             <td>{{ $key + 1 }}</td>
                                             <td>{{ $category->name }}</td>
                                             <td>
-                                                <a class="btn btn-sm btn-warning" href="#">Edit</a>
+                                                <a class="btn btn-sm btn-warning" href="{{ route('categories.edit',$category->id) }}">Edit</a>
                                                 <a onclick="return confirm('are you sure?')" class="btn btn-sm btn-danger" href="{{ route('categories.delete',$category->id) }}">Delete</a>
                                             </td>
                                         </tr>

@@ -33,6 +33,13 @@ class CategoryController extends Controller
 
     }
 
+    public function edit($id)
+    {
+        $category = categories::find($id);
+        
+        return view('backend.categories.edit',['category' => $category]);
+    }
+
     public function delete($id){
         $status = categories::find($id)->delete();
         if($status){
@@ -41,6 +48,24 @@ class CategoryController extends Controller
         else{
             return  redirect()->back()->with('error','Something went wrong');
         }
+
+    }
+
+    function update(Request $request){
+        $name = $request->name;
+        $id = $request->id;
+        
+        $status = categories::where('id',$id)->update([
+            'name'  => $name
+        ]);
+
+        if($status){
+            return redirect('categories')->with('success','Record update successfully');
+        }
+        else{
+            return  redirect()->back()->with('error','Something went wrong');
+        }
+
 
     }
 }
