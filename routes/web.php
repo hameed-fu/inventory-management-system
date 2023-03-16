@@ -28,6 +28,14 @@ Route::post('categories/store', [App\Http\Controllers\CategoryController::class,
 Route::get('categories/delete/{id}', [App\Http\Controllers\CategoryController::class,'delete'])->name('categories.delete');
 
 Route::get('items', [App\Http\Controllers\ItemController::class,'index'])->name('items');
+Route::post('items/store',[App\Http\Controllers\ItemController::class,'store'])->name('items.add');
+Route::get('items/delete/{id}', [App\Http\Controllers\ItemController::class,'delete'])->name('items.delete');
+
+
+
+
+
+
 
 Route::get('users', [App\Http\Controllers\ItemController::class,'index'])->name('users');
 
