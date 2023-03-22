@@ -39,15 +39,40 @@ class ItemController extends Controller
         }
 
 
+        public function edit($id)
+        {
+            $items = items::find($id);
+            
+            return view('backend.items.edit',['items' => $items]);
+        }
+
+
     }
     public function delete($id){
-        $status = Item::find($id)->delete();
+        $status = item::find($id)->delete();
         if($status){
             return redirect('items')->with('success','Record deleted successfully');
         }
         else{
             return  redirect()->back()->with('error','Something went wrong');
         }
+
+    }
+    function update(Request $request){
+        $name = $request->name;
+        $id = $request->id;
+        
+        $status = items::where('id',$id)->update([
+            'name'  => $name
+        ]);
+
+        if($status){
+            return redirect('items')->with('success','Record update successfully');
+        }
+        else{
+            return  redirect()->back()->with('error','Something went wrong');
+        }
+
 
     }
 
