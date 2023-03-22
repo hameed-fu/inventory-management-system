@@ -13,11 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
+
 Route::get('/', function () {
-    return view('backend.dashboard');
+    return view('dashboard');
 });
-
-
 
 
 // 
@@ -31,8 +32,9 @@ Route::get('categories/delete/{id}', [App\Http\Controllers\CategoryController::c
 
 Route::get('items', [App\Http\Controllers\ItemController::class,'index'])->name('items');
 Route::post('items/store',[App\Http\Controllers\ItemController::class,'store'])->name('items.add');
+Route::post('items/edit/{id}',[App\Http\Controllers\ItemController::class,'edit'])->name('items.edit');
 Route::get('items/delete/{id}', [App\Http\Controllers\ItemController::class,'delete'])->name('items.delete');
-
+Route::get('items/update/{id}', [App\Http\Controllers\ItemController::class,'update'])->name('items.update');
 
 
 

@@ -123,7 +123,7 @@
                                             <td>{{ $item->category_id  }}</td>
                                             <td>{{ $item->Description}}</td>
                                             <td>
-                                                <a class="btn btn-sm btn-warning" href="#">Edit</a>
+                                                <a class="btn btn-sm btn-warning" href="{{ route('items.edit',$items->id) }}">Edit</a>
                                                 <a onclick="return confirm('are you sure?')" class="btn btn-sm btn-danger" href="{{ route('items.delete',$item->id) }}">Delete</a>
                                             </td>
                                         </tr>
